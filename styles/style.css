@@ -1,0 +1,223 @@
+/* Resetando as margens, paddings e caixas de todos os elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Definindo as propriedades para o HTML e o corpo da página */
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+
+/* Estilizando o corpo da página */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 0%, 95%);
+}
+
+/* Estilizando o contêiner principal (main) */
+main {
+  background-color: rgb(255, 255, 255);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 510px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 10px 10px 20px rgba(57, 166, 255, 0.123);
+  border-radius: 1rem;
+  margin: 2rem;
+  max-width: 750px;
+
+  /* Estilizando para dispositivos com largura menor ou igual a 768px */
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Estilizando o contêiner do resultado */
+.container_result {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, hsl(252, 100%, 67%) 0%, hsl(241, 81%, 54%) 100%);
+  border-radius: 1.5rem;
+  text-align: center;
+  justify-content: start;
+  align-items: center;
+  padding: 2.5rem 3rem;
+  gap: 1rem;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+
+/* Estilizando o título do resultado */
+.result_text h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* Estilizando o círculo do resultado */
+.result_circle {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(to top, rgba(117, 55, 55, 0) 0%, hsl(241, 81%, 54%) 100%);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 8px;
+}
+
+/* Estilizando o texto dentro do círculo */
+.result_circle h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+}
+
+/* Estilizando a descrição do resultado */
+.result_description {
+  max-width: 80%;
+}
+
+/* Estilizando o título da descrição do resultado */
+.result_description h2{
+  font-size: 2rem;
+}
+
+/* Estilizando o parágrafo da descrição do resultado */
+.result_description p{
+  font-size: 1.1rem;
+}
+
+/* Estilizando o contêiner do resumo */
+.container_sumary {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 2.5rem 3rem;
+  border-radius: 0rem 0.8rem 0.8rem 0rem;
+  margin: 1rem 0;
+  gap: 1.5rem;
+  width: 100%;
+  height: 100%;
+}
+
+/* Estilizando o título do resumo */
+.sumary_title{
+  font-size: 1.5rem;
+}
+
+/* Estilizando os itens do resumo */
+.sumary_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 1rem;
+  margin: 0;
+  border-radius: 0.4rem;
+  margin-bottom: 10px;
+  gap: 1rem;
+}
+
+/* Estilizando a lista dentro dos itens do resumo */
+.sumary_list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Estilizando o título dentro dos itens do resumo */
+.sumary_item > h3 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Estilizando o elemento 'span' dentro dos itens do resumo */
+.sumary_item span {
+  display: flex;
+  font-size: 18px;
+  font-weight: 500;
+  color: #303B5975;
+}
+
+/* Estilizando o elemento 'b' dentro dos itens do resumo */
+.sumary_item b {
+  color: #303B59;
+}
+
+/* Estilizando as reações no resumo */
+.sumary_reaction{
+  background: hsla(0, 100%, 67%, 0.05);
+}
+
+/* Estilizando o título das reações no resumo */
+.sumary_reaction h3{
+  color: hsl(0, 100%, 67%);
+}
+
+/* Estilizando a memória no resumo */
+.sumary_memory{
+  background: hsla(39, 100%, 56%, 0.05);
+}
+
+/* Estilizando o título da memória no resumo */
+.sumary_memory h3{
+  color: hsl(39, 100%, 56%);
+}
+
+/* Estilizando o verbal no resumo */
+.sumary_verbal{
+  background: hsla(166, 100%, 37%, 0.05);
+}
+
+/* Estilizando o título do verbal no resumo */
+.sumary_verbal h3{
+  color: hsl(166, 100%, 37%);
+}
+
+/* Estilizando o visual no resumo */
+.sumary_visual{
+  background: hsla(234, 85%, 45%, 0.05);
+}
+
+/* Estilizando o título do visual no resumo */
+.sumary_visual h3{
+  color: hsl(234, 85%, 45%);
+}
+
+/* Estilizando o botão de continuação */
+.btn_continue button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem 1rem;
+  border-radius: 25px;
+  gap: 1rem;
+  background-color: #303B59;
+  transition-duration: 300ms;
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+}
+
+/* Efeito hover para o botão de continuação */
+.btn_continue button:hover{
+  background: linear-gradient(180deg, hsl(252, 100%, 67%) 0%, hsl(241, 81%, 54%) 100%);
+  cursor: pointer;
+}
